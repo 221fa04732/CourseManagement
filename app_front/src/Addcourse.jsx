@@ -37,7 +37,7 @@ function Addcourse(){
                 }}></TextField>
                 <div style = {{display: "flex", justifyContent: "center"}}
                 onClick={async() => {
-                    await axios.post("http://localhost:3000/admin/courses",{
+                    await axios.post("https://coursemanagement-ta16.onrender.com/admin/courses",{
                     user_id: localStorage.getItem("id"),
                     title: title,
                     description: description,

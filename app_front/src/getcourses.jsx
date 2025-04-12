@@ -14,7 +14,7 @@ function Getcourses(){
         function callback1(res){
             res.json().then(callback2)
         }
-        fetch("http://localhost:3000/admin/courses", {
+        fetch("https://coursemanagement-ta16.onrender.com/admin/courses", {
             method: "GET",
             headers : {
                 "Authorization": "Bearer " + localStorage.getItem("token"),

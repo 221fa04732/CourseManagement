@@ -16,7 +16,7 @@ function Course(){
     const setCourses = useSetRecoilState(atomCourses);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/admin/course/" + courseId, {
+        axios.get("https://coursemanagement-ta16.onrender.com/admin/course/" + courseId, {
             method: "GET",
             headers: {
                 "Authorization" : "Bearer " + localStorage.getItem("token")
@@ -113,7 +113,7 @@ function UpdateCard({course, setCourse}) {
             <Button
                 variant="contained"
                 onClick={async () => {
-                    axios.put("http://localhost:3000/admin/courses/" + course._id, {
+                    axios.put("https://coursemanagement-ta16.onrender.com/admin/courses/" + course._id, {
                         user_id: localStorage.getItem("id"),
                         title: title,
                         description: description,

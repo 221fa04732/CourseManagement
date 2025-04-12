@@ -16,7 +16,7 @@ function Appbar(){
         function callOne(res){
             res.json().then(callTwo);
         }
-        fetch("http://localhost:3000/admin/me", {
+        fetch("https://coursemanagement-ta16.onrender.com/admin/me", {
             method: "GET",
             headers: {
                 "authorization" : "Bearer " + localStorage.getItem("token")
